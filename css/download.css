@@ -1,0 +1,32 @@
+section#download {
+  background-color: #f2f2f2;
+}
+section#download .wrap { 
+  display: grid;
+  grid-template-columns: 82% auto;
+  grid-template-rows: auto auto;
+  width: 980px;
+}
+section#download .wrap>* {
+
+}
+section#download .wrap h2 {
+
+}
+section#download .wrap a {
+  color: #009bfa;
+}
+section#download .wrap a::after{
+  content: "";
+  background-image: url(../img/arrow.svg);
+  display: inline-block;
+  width: 24px;
+  height: 13px;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+section#download .wrap img {
+  max-width: 200px;
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}

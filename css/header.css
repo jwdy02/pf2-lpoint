@@ -1,0 +1,143 @@
+body{
+  
+}
+header {  
+  padding: 0 !important;
+  height: 100px;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  animation-name: headerH;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  animation-delay: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards; /*  애니메이션의 마지막 상태값을 그대로 유지  */
+  animation-timing-function: ease-in;
+  background-color: white;
+}
+@keyframes headerH{
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%{
+   opacity: 0;
+   transform: translateY(-100%);
+  }
+}
+header div.wrap {  
+  width: 1080px;
+  align-items: center;
+}
+header div.wrap h1 {
+  
+}
+header div.wrap h1 a {
+  font-size: 0;
+  width: 165px;
+  height: 20px;
+  display: block;
+  background-image: url(../img/logo-lpoint-y.png);
+}
+header div.wrap ul.gnb {  
+  transform: translateX(-100%);
+  height: 100%;
+}
+header div.wrap ul.gnb li {
+  
+}
+header div.wrap ul.gnb li a {
+  padding: 0 20px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid transparent;
+}
+
+header div.wrap ul.gnb li a:hover{
+  color: #32aefa; 
+  border-bottom: 1px solid #32aefa;
+}
+header div.wrap .sublist {  
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  padding: 40px 0 70px;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: calc((100% - 1080px) / 2) 320px auto;
+  display: none;
+}
+header div.wrap .sublist h2 {
+  
+}
+header div.wrap .sublist ul{  
+  grid-column: 3;
+}
+header div.wrap .sublist ul li{
+  
+}
+header div.wrap .sublist ul li a{  
+  line-height: 1.7;
+  display: block;
+}
+header div.wrap ul.lang {  
+  gap: 10px;
+}
+header div.wrap ul.lang li {
+  
+}
+header div.wrap ul.lang li a {
+  padding: 10px 0;
+}
+header div.wrap ul.lang li:nth-child(3) a{  
+  font-size: 0;
+  background-image: url(../img/c.svg);
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  /*! text-align: center; */
+  align-items: center;
+}
+header div.wrap ul.lang li:nth-child(3) a::after{
+  content: "고객센터";  
+  font-size: 12px;
+  display: block;
+  width: max-content;
+  margin-top: 28px;
+  background-color: #e7e7e7;
+  padding: 5px;
+  border-radius: 10px;
+  color: #888;
+  display: none;
+}
+header div.wrap ul.lang li:nth-child(3) a:hover::after{
+  display: initial;
+  animation-name: fade; /* 애니메이션 이름 */
+  animation-duration: 1s; /* 애니메이션 시간(초) */
+}
+@keyframes fade{ /* fade이름의 애니메이션 설정 */
+  0%{ /* 처음 */
+    opacity: 0; /* 투명도 */
+    transform: translateY(30%);
+  }
+  100%{ /* 마지막 */
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.show{
+  display: grid !important;
+}

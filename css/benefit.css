@@ -1,0 +1,28 @@
+section#benefit {
+  background-color: white;
+ }
+ section#benefit .wrap {
+  transform: translateX(-70%);
+ }
+ section#benefit .wrap>* {
+
+ }
+ section#benefit .wrap h2 {
+
+ }
+ section#benefit .wrap p {
+  margin-top: 10px;
+ }
+ section#benefit .wrap a {
+  color: #009bfa;
+  margin-top: 50px;
+ }
+section#benefit .wrap a::after{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 13px;
+  background-image: url(../img/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
